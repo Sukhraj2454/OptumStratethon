@@ -1,0 +1,70 @@
+const mongoose = require('mongoose');
+
+var PayersSchema = new mongoose.Schema({
+  ID:{
+    type:String
+  },
+  NAME:{
+    type:String
+  },
+  ADDRESS:{
+    type:String
+  },
+  CITY:{
+    type:String
+  },
+  STATE_HEADQUARTERED:{
+    type:String
+  },
+  ZIP:{
+    type:String
+  },
+  PHONE:{
+    type:String
+  },
+  AMOUNT_COVERED:{
+    type:String
+  },
+  AMOUNT_UNCOVERED:{
+    type:String
+  },
+  REVENUE:{
+    type:String
+  },
+  COVERED_ENCOUNTERS:{
+    type:String
+  },
+  UNCOVERED_ENCOUNTERS:{
+    type:String
+  },
+  COVERED_MEDICATIONS:{
+    type:String
+  },
+  UNCOVERED_MEDICATIONS:{
+    type:String
+  },
+  COVERED_PROCEDURES:{
+    type:String
+  },
+  UNCOVERED_PROCEDURES:{
+    type:String
+  },
+  COVERED_IMMUNIZATIONS:{
+    type:String
+  },
+  UNCOVERED_IMMUNIZATIONS:{
+    type:String
+  },
+  UNIQUE_CUSTOMERS:{
+    type:String
+  },
+  QOLS_AVG:{
+    type:String
+  },
+  MEMBER_MONTHS:{
+    type:String
+  }
+});
+
+var Payers = mongoose.model('payers', PayersSchema);
+module.exports = {Payers};

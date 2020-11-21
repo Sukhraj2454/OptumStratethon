@@ -1,0 +1,6 @@
+{
+  "development": {
+    "PORT": 5500,
+    "MONGODB_URI": "mongodb://localhost:27017/optum"
+  }
+}
