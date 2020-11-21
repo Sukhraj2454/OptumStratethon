@@ -58,10 +58,10 @@ h2 span{
 }
 
 .bg1{
-    background: url("/Main/images/bg1.jpg");
+    background: url("../images/bg1.jpg");
 }
 
 .bg2{
-    background: url("/Main/images/bg2.png");
+    background: url("../images/bg2.png");
 }
 

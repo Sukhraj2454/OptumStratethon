@@ -1,0 +1,23 @@
+{
+  "name": "oh",
+  "version": "1.0.0",
+  "description": "To clone this repository\r git clone https://github.com/sukhraj2454/OptumStratethon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sukhraj2454/OptumStratethon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sukhraj2454/OptumStratethon/issues"
+  },
+  "homepage": "https://github.com/Sukhraj2454/OptumStratethon#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  }
+}
