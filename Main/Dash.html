@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="RAIDERS">
+    <meta name="Leader" content="TarunKumar, 18103091">
+    <meta name="Member" content="SukhrajSingh, 18103088">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel='stylesheet' href="./styles/dash.css">
+    <title>Stratethon | Home</title>
+</head>
+<body>        
+    <nav>
+        <h1>PatientId: <span id='PID'></span>
+            <span id='lout' style="float: right; margin-right: 10px; cursor: pointer;">Logout</span>
+        </h1>
+        <h1 id='Uid'></h1>
+    </nav>
+
+    <div class='container'>
+        <!-- 1 -->
+        <div class='bg2 fas fa-heartbeat'>
+            <h2>70 <span>/min</span></h2>
+            <p>Heart Rate</p>
+            <h2>LastChecked: Now</h2>
+        </div>
+        <!-- 2 -->
+        <div class='bg2'>
+            <h3>Height <span> 165 cm</span></h3>
+            <h3>Weight <span> 64.7 kg</span></h3>
+            <h2>BMI <span> 71.3%</span></h2>
+            <p>Body Mass Index</p>
+        </div>
+        <!-- 3 -->
+        <div class='bg1 fas fa-lungs'>
+            <h2>14 <span>/min</span></h2>
+            <p>Respiration Rate</p>
+        </div>
+        <!-- 4 -->
+        <div class='bg2 fas fa-lungs'>
+            <h2>14 <span>/min</span></h2>
+            <p>Respiration Rate</p>
+        </div>
+        <!-- 5 -->
+        <div class='bg2 fas fa-thermometer-full'>
+            <h2> 37.1 <span> &#8451</span></h2>
+            <p>Body Temperature</p>
+        </div>
+        <!-- 6 -->
+        <div class='bg1'>
+            <h2>Medication for <span>Cystitis</span></h2>
+            <h3><a href="#" style="color: white;">Description</a></h3>
+            <h3><a href="#" style="color: white;">CostMetrics</a></h3>
+        </div>
+        <!-- 7 -->
+        <div class='bg2'>
+            <h2>Systolic <span> 165 cm</span></h2>
+            <h2>Diastolic <span> 64.7 kg</span></h2>
+            <p>Blood Pressure</p>
+        </div>
+        <!-- 8 -->
+        <div class='bg2' id='Tests'>
+            <h2>PAST TEST RESULTS</h2>
+        </div>
+        <!-- 9 -->
+        <div class='bg1' id='cps'>
+            <h2>Care Plan <span>Wound Care</span></h2>
+        </div>
+        <!-- 10 -->
+        <div class='bg1' id='proc'>
+            <h2>Procedure: <span>Upper Arm X-ray</span></h2>
+            <p>Reason: For fracture check.</p>
+        </div>
+        <!-- 11 -->
+        <div class='bg1'>
+            <h2>Devices</h2>
+        </div>
+        <!-- 12 -->
+        <div class='bg1'>
+            <h2>Appointment suggestion <span>JeanMarie</span></h2>
+            <p>Physical Therapy</p>
+        </div>
+    </div>
+
+    <div id='tests' class='popups' style="display: none;">
+        <h1 id='close' style="cursor: pointer;">X</h1>
+    </div>
+
+    <div id='careplans' class='popups' style="display: none;">
+        <h1 id='closeCp' style="cursor: pointer;">X</h1>
+    </div>
+
+    <div id='procedures' class='popups' style="display: none;">
+        <h1 id='closepr' style="cursor: pointer;">X</h1>
+    </div>
+    
+    <script id='Test-template' type='text/template'>
+        <div class='Tests'>
+                <h2>Dated:<span> {{date}}</span></h2>
+                <h2>Description:<span> {{desc}}<span></h2>
+                <h2>{{val}} <span>{{units}}<span></h2>
+        </div>
+    </script>
+    
+    <script id='Care-template' type='text/template'>
+        <div class='Tests'>
+                <h2>Start:<span> {{start}}</span></h2>
+                <h2>Stop:<span> {{stop}}<span></h2>
+                <h2>Description: <span>{{desc}}<span></h2>
+                <h2>Reason: <span>{{reason}}<span></h2>
+        </div>
+    </script>
+    <script id='Proc-template' type='text/template'>
+        <div class='Tests'>
+                <h2>Date:<span> {{date}}</span></h2>
+                <h2>Description: <span>{{desc}}<span></h2>
+                <h2>Cost:<span> {{cost}}<span></h2>
+                <h2>Reason: <span>{{reason}}<span></h2>
+        </div>
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src='js/mustache.js'></script>
+    <script src="js/dash.js"></script>
+    
+</body>
+</html>

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 var ProceduresSchema = new mongoose.Schema({
   DATE:{
     type:String
-  }
+  },
   PATIENT:{
     type:String
   },
