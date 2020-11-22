@@ -15,6 +15,8 @@ var {Providers} = require('./providers');
 var {CarePlan} = require('./careplans');
 var {Observations} = require('./observations');
 var {Procedures} = require('./procedures');
+var {Medications} = require('./medications');
+var {Devices} = require('./devices');
 
 var UserSchema = new mongoose.Schema({
   email:{
@@ -206,6 +208,18 @@ UserSchema.methods.observations = function(){
 UserSchema.methods.procedures = function() {
   return Procedures.find({PATIENT:this.Id}).then((pros) => pros);
 }
+
+UserSchema.methods.medications = function() {
+  return Medications.find({PATIENT: this.Id}).then((meds) => meds);
+}
+
+UserSchema.methods.devices = function () {
+  return Devices.find({PATIENT: this.Id}).then((devcs) => devcs);
+}
+UserSchema.methods.allergies = function (){
+  return Allergy.find({PATIENT: this.Id}).then((algs) => algs);
+}
+
 var User = mongoose.model('User', UserSchema);
 
 module.exports = {User};

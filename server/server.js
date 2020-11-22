@@ -116,6 +116,18 @@ app.get('/procedures', authenticate, (req, res) => {
   req.user.procedures().then((data) => res.send(data));
 });
 
+// Medications
+app.get('/medications', authenticate, (req, res) => {
+  req.user.medications().then((data) => res.send(data));
+});
+// Devices
+app.get('/devices', authenticate, (req, res) => {
+  req.user.devices().then((data) => res.send(data));
+});
+// Allergies
+app.get('/allergies', authenticate, (req, res) => {
+  req.user.allergies().then((data) => res.send(data));
+});
 server.listen(PORT, () => {
     console.log(`server is listening on ${PORT}`);
 });
