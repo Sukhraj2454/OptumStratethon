@@ -29,7 +29,7 @@
         <div class='bg2'>
             <h3>Height <span> 165 cm</span></h3>
             <h3>Weight <span> 64.7 kg</span></h3>
-            <h2>BMI <span> 71.3%</span></h2>
+            <h2>BMI <span> 71.3 Kg/m2</span></h2>
             <p>Body Mass Index</p>
         </div>
         <!-- 3 -->
@@ -53,8 +53,8 @@
         </div>
         <!-- 7 -->
         <div class='bg2'>
-            <h2>Systolic <span> 165 cm</span></h2>
-            <h2>Diastolic <span> 64.7 kg</span></h2>
+            <h2>Systolic <span> 119 mm[Hg]</span></h2>
+            <h2>Diastolic <span> 82.0 mm[Hg]</span></h2>
             <p>Blood Pressure</p>
         </div>
         <!-- 8 -->
@@ -121,7 +121,13 @@
                 <h2>Reason: <span>{{reason}}<span></h2>
         </div>
     </script>
-    
+    <script id='arg-template' type='text/template'>
+        <div class='Tests'>
+                <h2>Start:<span> {{start}}</span></h2>
+                <h2>Stop:<span> {{stop}}<span></h2>
+                <h2>Allergy: <span>{{desc}}<span></h2>
+        </div>
+    </script>
     <script id='Enc-template' type='text/template'>
         <div class='Tests'>
                 <h2>Org:<span> {{org}}</span></h2>

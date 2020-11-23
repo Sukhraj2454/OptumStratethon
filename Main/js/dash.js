@@ -191,10 +191,7 @@ req.onreadystatechange = function() {
             var html = Mustache.render(template, {
                 start:data[i].START,
                 stop:data[i].STOP,
-                pres:data[i].DESCRIPTION,
-                coverage:data[i].PAYER_COVERAGE,
-                cost:data[i].BASE_COST,
-                disease:data[i].REASONDESCRIPTION
+                device:data[i].DESCRIPTION
             });
             jQuery('#devices').append(html);
         }
@@ -258,6 +255,7 @@ req.onreadystatechange = function() {
         let data = JSON.parse(this.responseText);
         jQuery('#allergies').attr('style', 'display:block');
         jQuery('.container').eq(0).attr('style', 'filter:blur(20px)');
+        console.log(data);
         if(data.length == 0)
         {
             jQuery('#allergies').append('No Data Found.');
@@ -266,11 +264,9 @@ req.onreadystatechange = function() {
         {
             var template = jQuery('#arg-template').html();
             var html = Mustache.render(template, {
-                org:data[i].Org,
-                cost:data[i].Cost,
-                coverage:data[i].Coverage,
-                Disease:data[i].reason,
-                doc:data[i].Doc
+                start:data[i].START,
+                stop:data[i].STOP,
+                desc:data[i].DESCRIPTION
             });
             jQuery('#allergies').append(html);
         }

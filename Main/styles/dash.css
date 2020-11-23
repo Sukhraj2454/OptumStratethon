@@ -70,12 +70,14 @@ h2 span{
 }
 
 .bg1{
-    background: rgb(65, 34, 34);
+    color: black;
+    font-size: x-large;
+    background:url('../images/bg3.jpg');
 }
 
 .bg2{
-    color:#333  ;
-    background: #ddc4a8;
+    color:#eee  ;
+    background:url('../images/bg1.jpg');
 }
 
 .popups{
